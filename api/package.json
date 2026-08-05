@@ -2,6 +2,7 @@
   "name": "visionflow-api",
   "version": "1.0.0",
   "private": true,
+  "author": "Elio Lima <elio.designer@hotmail.com.br>",
   "type": "module",
   "imports": {
     "#controllers/*": "./app/controllers/*.js",

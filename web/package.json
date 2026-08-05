@@ -2,6 +2,7 @@
   "name": "visionflow-web",
   "version": "1.0.0",
   "private": true,
+  "author": "Elio Lima <elio.designer@hotmail.com.br>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

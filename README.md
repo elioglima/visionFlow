@@ -269,6 +269,10 @@ Open http://localhost:3000 to see sample jobs with simulated progress, stats, an
 
 > **VisionFlow is an intelligent video analytics platform built with AdonisJS, Python, YOLO, OpenCV and FFmpeg. It processes uploaded videos, detects and tracks people, generates annotated outputs and provides processing metrics through a modern web interface and REST API.**
 
+## Author
+
+**Elio Lima** — [elio.designer@hotmail.com.br](mailto:elio.designer@hotmail.com.br)
+
 ## License
 
 MIT

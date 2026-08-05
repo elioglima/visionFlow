@@ -1,0 +1,5 @@
+opencv-python-headless==4.10.0.84
+ultralytics==8.3.49
+redis==5.2.1
+requests==2.32.3
+numpy==2.1.3

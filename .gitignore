@@ -1,0 +1,100 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+build/
+dist/
+.next/
+out/
+tmp/
+temp/
+
+# AdonisJS
+.adonisjs/
+ace-manifest.json
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / Editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+.nyc_output/
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.egg
+.mypy_cache/
+.ruff_cache/
+
+# YOLO / ML models
+*.pt
+*.pth
+*.onnx
+*.weights
+runs/
+wandb/
+
+# Video processing (uploads & outputs)
+storage/uploads/*
+storage/processed/*
+storage/reports/*
+!storage/**/.gitkeep
+
+# Docker
+.docker/
+
+# Database
+*.sqlite
+*.sqlite3
+postgres-data/
+redis-data/
+
+# Redis
+dump.rdb
+
+# Misc
+.cache/
+.turbo/
+*.tsbuildinfo
+.eslintcache

@@ -4,6 +4,20 @@
 
 The application lets users upload a video through a web interface, monitor processing progress, and view results directly in the browser. In addition to the processed video, VisionFlow provides metrics such as total people detected, peak simultaneous count, appearance duration, and a detection report.
 
+## Screenshots
+
+### Home — Upload screen
+
+![Home screen — upload area and tech stack](docs/homeScreen.png)
+
+### Completed job — Analytics & player
+
+![Completed job card with stats, video player and downloads](docs/completedJobCard.png)
+
+### Jobs list — Multiple results
+
+![Jobs list with completed processing cards](docs/jobsList.png)
+
 ## What the project does
 
 - Video file upload

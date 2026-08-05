@@ -59,22 +59,6 @@ A new video is generated
 Result appears on the dashboard
 ```
 
-## Diagrams
-
-### System Architecture
-
-![System Architecture](docs/diagrams/systemArchitecture.png)
-
-### Video Processing Flow
-
-![Video Processing Flow](docs/diagrams/videoProcessingFlow.png)
-
-### Job Lifecycle
-
-![Job Lifecycle](docs/diagrams/jobLifecycle.png)
-
-> Editable source files: `docs/diagrams/*.drawio` (open with [draw.io](https://app.diagrams.net))
-
 ## Technologies
 
 ### AdonisJS and TypeScript
@@ -203,8 +187,7 @@ visionFlow/
 ├── api/                  # REST API (AdonisJS + TypeScript)
 ├── web/                  # Web interface (Next.js)
 ├── processor/            # Vision processor (Python + YOLO)
-├── docs/                 # Screenshots and architecture diagrams
-│   └── diagrams/         # draw.io source files and PNG exports
+├── docs/                 # Screenshots
 ├── storage/              # Uploads, processed videos and reports
 ├── docker-compose.yml    # Service orchestration
 ├── start.sh              # Quick start script

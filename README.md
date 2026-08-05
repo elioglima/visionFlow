@@ -10,13 +10,17 @@ The application lets users upload a video through a web interface, monitor proce
 
 ![Home screen — upload area and tech stack](docs/homeScreen.png)
 
+### Dashboard — Full overview
+
+![Dashboard overview with upload area and completed jobs](docs/dashboardOverview.png)
+
+### Jobs — Processing progress
+
+![Jobs dashboard with completed and processing status](docs/jobsDashboard.png)
+
 ### Completed job — Analytics & player
 
 ![Completed job card with stats, video player and downloads](docs/completedJobCard.png)
-
-### Jobs list — Multiple results
-
-![Jobs list with completed processing cards](docs/jobsList.png)
 
 ## What the project does
 

@@ -1,0 +1,190 @@
+<mxfile host="app.diagrams.net" agent="VisionFlow" version="22.1.0">
+  <diagram id="video-processing-flow" name="Video Processing Flow">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="VisionFlow — Video Processing Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="20" width="480" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="user" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f5f5f5;strokeColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="40" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="web" value="Next.js&#xa;Web" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="180" y="130" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="api" value="AdonisJS&#xa;API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="360" y="130" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="redis" value="Redis&#xa;Queue" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="540" y="120" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="700" y="120" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="proc" value="Python&#xa;Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="860" y="130" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ff" value="FFmpeg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="110" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cv" value="YOLO +&#xa;OpenCV" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="170" width="90" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="lifeline-user" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#999999" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="220" as="sourcePoint"/>
+            <mxPoint x="80" y="820" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lifeline-web" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#999999" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="220" as="sourcePoint"/>
+            <mxPoint x="240" y="820" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lifeline-api" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#999999" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="220" as="sourcePoint"/>
+            <mxPoint x="420" y="820" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lifeline-redis" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#999999" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="220" as="sourcePoint"/>
+            <mxPoint x="590" y="820" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lifeline-db" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#999999" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="220" as="sourcePoint"/>
+            <mxPoint x="750" y="820" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lifeline-proc" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#999999" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="220" as="sourcePoint"/>
+            <mxPoint x="920" y="820" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lifeline-ff" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#999999" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1085" y="220" as="sourcePoint"/>
+            <mxPoint x="1085" y="820" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m1" value="1. Upload video" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="250" as="sourcePoint"/>
+            <mxPoint x="240" y="250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. POST /api/videos" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="280" as="sourcePoint"/>
+            <mxPoint x="420" y="280" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. Validate format &amp; size" style="endArrow=block;html=1;strokeWidth=1;dashed=1" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="310" as="sourcePoint"/>
+            <mxPoint x="470" y="310" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="470" y="310"/>
+              <mxPoint x="470" y="330"/>
+              <mxPoint x="430" y="330"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. Create job (pending)" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="360" as="sourcePoint"/>
+            <mxPoint x="750" y="360" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. Enqueue job id" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="390" as="sourcePoint"/>
+            <mxPoint x="590" y="390" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. Job created" style="endArrow=open;dashed=1;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="420" as="sourcePoint"/>
+            <mxPoint x="240" y="420" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="loop-box" value="Poll every 2s" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;fontStyle=2;startSize=25" vertex="1" parent="1">
+          <mxGeometry x="150" y="450" width="320" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="m7" value="GET /api/videos/:id" style="endArrow=block;html=1;strokeWidth=1" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint"/>
+            <mxPoint x="420" y="490" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="status + progress" style="endArrow=open;dashed=1;html=1;strokeWidth=1" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="510" as="sourcePoint"/>
+            <mxPoint x="240" y="510" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m9" value="7. Dequeue job id" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="560" as="sourcePoint"/>
+            <mxPoint x="920" y="560" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="8. PATCH progress (processing)" style="endArrow=block;html=1;strokeWidth=1;dashed=1" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="590" as="sourcePoint"/>
+            <mxPoint x="420" y="590" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="9. Normalize video" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="620" as="sourcePoint"/>
+            <mxPoint x="1085" y="620" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12" value="10. Detect &amp; track (each frame)" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="660" as="sourcePoint"/>
+            <mxPoint x="1085" y="660" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m13" value="11. PATCH progress (15–95%)" style="endArrow=block;html=1;strokeWidth=1;dashed=1" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="690" as="sourcePoint"/>
+            <mxPoint x="420" y="690" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="12. Restore audio + write report" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="730" as="sourcePoint"/>
+            <mxPoint x="1085" y="730" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m15" value="13. PATCH completed (100%)" style="endArrow=block;html=1;strokeWidth=2;dashed=1" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="760" as="sourcePoint"/>
+            <mxPoint x="420" y="760" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m16" value="14. View stats &amp; download" style="endArrow=block;html=1;strokeWidth=2" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="800" as="sourcePoint"/>
+            <mxPoint x="240" y="800" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

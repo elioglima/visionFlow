@@ -1,0 +1,28 @@
+import { Ignitor } from '@adonisjs/core'
+
+const APP_ROOT = new URL('../', import.meta.url)
+
+const ignitor = new Ignitor(APP_ROOT, {
+  importer: (filePath) => import(filePath),
+})
+
+await ignitor.init()
+await ignitor.boot()
+await ignitor.start((error) => {
+  console.error(error)
+  process.exit(1)
+})
+
+const command = process.argv[2]
+
+if (command === 'migration:run') {
+  const db = await import('@adonisjs/lucid/services/db')
+  const { default: migrator } = await import('@adonisjs/lucid/migration')
+  const migration = new migrator.default(db.default, ignitor.createApp('console'))
+  await migration.run()
+  console.log('Migrations completed')
+  process.exit(0)
+}
+
+console.log('Unknown command')
+process.exit(1)

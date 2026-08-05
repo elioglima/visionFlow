@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS videos (
+  id UUID PRIMARY KEY,
+  original_filename VARCHAR(255) NOT NULL,
+  status VARCHAR(20) NOT NULL DEFAULT 'pending',
+  progress INTEGER NOT NULL DEFAULT 0,
+  duration_seconds DOUBLE PRECISION,
+  width INTEGER,
+  height INTEGER,
+  frame_count INTEGER,
+  unique_people INTEGER,
+  max_people_in_frame INTEGER,
+  average_people_per_frame DOUBLE PRECISION,
+  processing_time_seconds DOUBLE PRECISION,
+  original_path VARCHAR(500) NOT NULL,
+  processed_path VARCHAR(500),
+  report_path VARCHAR(500),
+  error_message TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

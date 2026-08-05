@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "rootDir": "./",
+    "outDir": "./build",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "#controllers/*": ["./app/controllers/*.js"],
+      "#models/*": ["./app/models/*.js"],
+      "#services/*": ["./app/services/*.js"],
+      "#config/*": ["./config/*.js"],
+      "#start/*": ["./start/*.js"],
+      "#database/*": ["./database/*.js"]
+    }
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "build"]
+}

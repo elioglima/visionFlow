@@ -59,17 +59,17 @@ Result appears on the dashboard
 
 ### System Architecture
 
-![System Architecture](diagrams/systemArchitecture.png)
+![System Architecture](docs/diagrams/systemArchitecture.png)
 
 ### Video Processing Flow
 
-![Video Processing Flow](diagrams/videoProcessingFlow.png)
+![Video Processing Flow](docs/diagrams/videoProcessingFlow.png)
 
 ### Job Lifecycle
 
-![Job Lifecycle](diagrams/jobLifecycle.png)
+![Job Lifecycle](docs/diagrams/jobLifecycle.png)
 
-> Editable source files: `diagrams/*.drawio` (open with [draw.io](https://app.diagrams.net))
+> Editable source files: `docs/diagrams/*.drawio` (open with [draw.io](https://app.diagrams.net))
 
 ## Technologies
 
@@ -199,6 +199,8 @@ visionFlow/
 ├── api/                  # REST API (AdonisJS + TypeScript)
 ├── web/                  # Web interface (Next.js)
 ├── processor/            # Vision processor (Python + YOLO)
+├── docs/                 # Screenshots and architecture diagrams
+│   └── diagrams/         # draw.io source files and PNG exports
 ├── storage/              # Uploads, processed videos and reports
 ├── docker-compose.yml    # Service orchestration
 ├── start.sh              # Quick start script

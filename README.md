@@ -41,6 +41,22 @@ A new video is generated
 Result appears on the dashboard
 ```
 
+## Diagrams
+
+### System Architecture
+
+![System Architecture](diagrams/systemArchitecture.png)
+
+### Video Processing Flow
+
+![Video Processing Flow](diagrams/videoProcessingFlow.png)
+
+### Job Lifecycle
+
+![Job Lifecycle](diagrams/jobLifecycle.png)
+
+> Editable source files: `diagrams/*.drawio` (open with [draw.io](https://app.diagrams.net))
+
 ## Technologies
 
 ### AdonisJS and TypeScript

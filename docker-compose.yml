@@ -1,0 +1,91 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: visionflow-postgres
+    environment:
+      POSTGRES_USER: visionflow
+      POSTGRES_PASSWORD: visionflow
+      POSTGRES_DB: visionflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U visionflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: visionflow-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: visionflow-api
+    ports:
+      - "3333:3333"
+    environment:
+      NODE_ENV: development
+      PORT: 3333
+      HOST: 0.0.0.0
+      APP_KEY: visionflow-dev-key-change-in-production
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: visionflow
+      DB_PASSWORD: visionflow
+      DB_DATABASE: visionflow
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      STORAGE_PATH: /app/storage
+    volumes:
+      - ./storage:/app/storage
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  processor:
+    build:
+      context: ./processor
+      dockerfile: Dockerfile
+    container_name: visionflow-processor
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      API_URL: http://api:3333
+      STORAGE_PATH: /app/storage
+      YOLO_MODEL: yolov8n.pt
+      CONFIDENCE_THRESHOLD: "0.5"
+    volumes:
+      - ./storage:/app/storage
+    depends_on:
+      redis:
+        condition: service_healthy
+      api:
+        condition: service_started
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: visionflow-web
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:3333
+    depends_on:
+      - api
+
+volumes:
+  postgres-data:
